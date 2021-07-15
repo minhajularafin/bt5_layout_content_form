@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--  CSS Links -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+
+    <title>Form</title>
+  </head>
+  <body>
+
+  <h1>Form Validation : Browser defaults
+</h1>
+
+
+    <section class="form">
+      <div class="container">
+        <div class="row">
+
+          <form class="row g-3">
+
+            <div class="col-md-4">
+              <label for="firstname" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstname" value="Minhajul" name="firstname" required>
+            </div>
+
+            <div class="col-md-4">
+              <label for="lastname" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastname" name="lastname" value="Arafin" required>
+            </div>
+
+            <div class="col-md-4">
+              <label for="username" class="form-label">Username</label>
+              <div class="input-group">
+                <span class="input-group-text" id="username">@</span>
+                <input type="text" class="form-control" id="username" name="username" placeholder="minhajularafin" aria-describedby="input">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="city" class="form-label">City</label>
+              <input type="text" class="form-control" name="city" id="city" required>
+            </div>
+
+            <div class="col-md-3">
+              <label for="state" class="form-label">State</label>
+              <select class="form-select" id="state" required>
+                <option selected="" disabled="" value="choose">Choose</option>
+                <option value="chandpur">Chandpur</option>
+                <option  value="comilla">Comilla</option>
+                <option  value="chittagong">Chittagong</option>
+                <option  value="dhaka">Dhaka</option>
+              </select>
+            </div>
+
+              <div class="col-md-3">
+                <label for="zip" class="form-label">Zip</label>
+                <input type="text" class="form-control" name="zip" id="zip" required>
+              </div>
+
+              <div class="col-12">
+                <div class="form-check">
+                  <input type="checkbox" value="" name="checkbox" class="form-check-input" id="checkbox" required="">
+                  <label for="checkbox" class="form-check-label">Agree to terms and conditions</label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </div>
+
+           </form> 
+          </form>
+          
+        </div>
+      </div>
+    </section>
+
+
+    <h1>Form Validatation : Server side</h1>
+
+
+    <section class="form">
+      <div class="container">
+        <div class="row">
+          
+          <form class="row g-3">
+  <div class="col-md-4">
+    <label for="firstname" class="form-label">First name</label>
+    <input type="text" class="form-control is-valid" id="firstname" value="Minhajul" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="lastname" class="form-label">Last name</label>
+    <input type="text" class="form-control is-valid" id="lastname" value="Arafin" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServerUsername" class="form-label">Username</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend3">@</span>
+      <input type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="minhajularafin" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        Please choose a username.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationServer03" class="form-label">City</label>
+    <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+    <div id="validationServer03Feedback" class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationServer04" class="form-label">State</label>
+    <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+      <option selected disabled value="">Choose</option>
+       <option value="chandpur">Chandpur</option>
+       <option  value="comilla">Comilla</option>
+       <option  value="chittagong">Chittagong</option>
+       <option  value="dhaka">Dhaka</option>
+    </select>
+    <div id="validationServer04Feedback" class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationServer05" class="form-label">Zip</label>
+    <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+    <div id="validationServer05Feedback" class="invalid-feedback">
+      Please provide a valid zip.
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+      <label class="form-check-label" for="invalidCheck3">
+        Agree to terms and conditions
+      </label>
+      <div id="invalidCheck3Feedback" class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
+
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+ 
+
+
+    <!-- JS Links -->
+    
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    
+  </body>
+</html>
